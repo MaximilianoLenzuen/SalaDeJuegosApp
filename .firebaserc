@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fir-hostingutnlaboiv"
+  },
+  "targets": {
+    "fir-hostingutnlaboiv": {
+      "hosting": {
+        "SalaDeJuegosApp": [
+          "fir-hostingutnlaboiv"
+        ]
+      }
+    }
+  }
+}
