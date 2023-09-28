@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from '../home/usuario';
 import Swal from 'sweetalert2';
+import { UsuarioService } from '../home/usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +14,22 @@ export class LoginComponent {
 
   public contraseniaText = '';
 
-  private user : Usuario = new Usuario('','');
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private usuarioService: UsuarioService) {}
+
+  accesoRapidoUno() {
+    this.mailText = 'pepe@gmail.com';
+    this.contraseniaText = '123456';
+  }
+
+  accesoRapidoDos() {
+    this.mailText = 'test@gmail.com';
+    this.contraseniaText = '123456';
+  }
 
   async loginEvent() {
-    this.user.contraseña = this.contraseniaText;
-    this.user.mail = this.mailText;
     try {
-      if(await this.user.loginConFirebase())
+      if(await this.usuarioService.loginConFirebase(this.mailText,this.contraseniaText))
       {
         Swal.fire({
           icon: 'success',
@@ -42,7 +49,6 @@ export class LoginComponent {
       console.log(error);
     }
     }
-
   }
 
 

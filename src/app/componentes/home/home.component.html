@@ -1,1 +1,73 @@
-<p>home works!</p>
+<section class="menu-juegos-container">
+    <div class="container">
+      <div class="container row">
+        <div class="col">
+            <div class="card">
+              <div class="card-body-logout">
+                <h5 class="card-title">Usuario</h5>
+                <p class="card-text">
+                    {{nombreDelUsuario}}
+                </p>
+                <a class="btn btn-primary btn-juegos-logout" (click)="desloggearEvent()"
+                >Log Out</a
+              >
+              </div>
+            </div>
+          </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ahorcado</h5>
+              <p class="card-text">
+                A definir
+              </p>
+              <a [routerLink]="['ahorcado']" class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-2">
+            <div class="card-body">
+              <h5 class="card-title">Mayor o Menor</h5>
+              <p class="card-text">
+                A definir
+              </p>
+              <a [routerLink]="['mayor-menor']" class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-2">
+            <div class="card-body">
+              <h5 class="card-title">Preguntados</h5>
+              <p class="card-text">
+                A definir
+              </p>
+              <a [routerLink]="['preguntados']" class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-2">
+            <div class="card-body">
+              <h5 class="card-title">Desactiva la bomba</h5>
+              <p class="card-text">
+                El juego consiste en desactivar la bomba adivinando la contraseña mediante una serie de pistas
+              </p>
+              <a
+                class="btn btn-primary btn-juegos"
+                >JUGAR</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

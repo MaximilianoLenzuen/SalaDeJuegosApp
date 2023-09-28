@@ -10,6 +10,8 @@
                 <label>Contraseña:</label>
                 <input id="pass" class="field_class" [(ngModel)]="contraseniaText" name="password_txt" type="password" placeholder="Ingrese la contraseña">
                 <button class="submit_class" type="submit" form="login_form" (click)="loginEvent()">Entrar</button>
+                <button class="submit_class" type="submit" form="login_form" (click)="accesoRapidoUno()">Acceso Rapido 1</button>
+                <button class="submit_class" type="submit" form="login_form" (click)="accesoRapidoDos()">Acceso Rapido 2</button>
             </div>
             <div class="info_div">
                 <p>No tiene cuenta? <a href="/registro">Registrese!</a></p>
