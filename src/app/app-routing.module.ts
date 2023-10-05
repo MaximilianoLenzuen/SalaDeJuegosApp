@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './componentes/login/login.component';
-import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
-import { HomeComponent } from './componentes/home/home.component';
-import { RegistroComponent } from './componentes/registro/registro.component';
+import { ChatComponent } from './componentes/chat/chat.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
-  { path: 'quiensoy', component: QuienSoyComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'registro', component: RegistroComponent},
+  { path: 'chat', component: ChatComponent},
+  { path: 'quiensoy',
+    loadChildren: () => import('./componentes/quien-soy/quien-soy.module')
+    .then(mod => mod.QuienSoyModule) },
+  { path: 'home',
+    loadChildren: () => import('./componentes/home/home.module')
+    .then(mod => mod.HomeModule) },
+  { path: 'registro',
+    loadChildren: () => import('./componentes/registro/registro.module')
+    .then(mod => mod.RegistroModule)},
   { path: '', redirectTo: 'login',pathMatch: 'full'},
 ];
 

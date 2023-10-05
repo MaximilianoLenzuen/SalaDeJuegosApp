@@ -1,5 +1,6 @@
 import { inject,Injectable } from '@angular/core';
 import { Auth,signInWithEmailAndPassword,createUserWithEmailAndPassword, fetchSignInMethodsForEmail } from '@angular/fire/auth';
+import { Firestore,addDoc,collection,collectionData } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { Auth,signInWithEmailAndPassword,createUserWithEmailAndPassword, fetchSi
 export class UsuarioService {
     private auth : Auth = inject(Auth);
 
-    constructor(){
+    constructor(private firestore: Firestore){
 
     }
 
@@ -62,4 +63,10 @@ export class UsuarioService {
       return false;
     }
   }
+
+  publicarMensaje(mensaje : string) {
+    const col = collection(this.firestore, 'mensajes');
+    addDoc(col, {mensaje: mensaje ,usuario: this.mail, fechaYHora: new Date()});
+  }
+  
 }

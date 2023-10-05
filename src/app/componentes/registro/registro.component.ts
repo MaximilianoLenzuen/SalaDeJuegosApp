@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { UsuarioService } from '../home/usuario.service';
+import { UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-registro',

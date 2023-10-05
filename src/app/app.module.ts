@@ -9,18 +9,13 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './componentes/home/home.component';
-import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
-import { RegistroComponent } from './componentes/registro/registro.component';
-import { UsuarioService } from './componentes/home/usuario.service';
+import { UsuarioService } from './componentes/services/usuario.service';
+import { ChatComponent } from './componentes/chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    HomeComponent,
-    QuienSoyComponent,
-    RegistroComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

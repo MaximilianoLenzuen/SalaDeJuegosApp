@@ -4,10 +4,11 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content:center;
+  display: flexbox;
+  justify-content:space-around;
   font-family: sans-serif;
 }
+
 
 .card {
   background-color: rgba(0, 0, 0, 0.6);
