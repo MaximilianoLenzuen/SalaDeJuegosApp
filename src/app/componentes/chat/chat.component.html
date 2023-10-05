@@ -13,6 +13,7 @@
             "
           >
             <span
+              [ngClass]="usuarioActual == message.usuario ? 'email-1' : 'email-2'"
               > {{message.usuario }}</span
             >
             <br />

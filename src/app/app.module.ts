@@ -11,11 +11,12 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { UsuarioService } from './componentes/services/usuario.service';
 import { ChatComponent } from './componentes/chat/chat.component';
+import { AhorcadoComponent } from './componentes/juegos/ahorcado/ahorcado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

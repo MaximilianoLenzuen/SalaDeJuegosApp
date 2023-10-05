@@ -9,6 +9,9 @@ const routes: Routes = [
   { path: 'quiensoy',
     loadChildren: () => import('./componentes/quien-soy/quien-soy.module')
     .then(mod => mod.QuienSoyModule) },
+  { path: 'ahorcado',
+    loadChildren: () => import('./componentes/juegos/ahorcado/ahorcado.module')
+    .then(mod => mod.AhorcadoModule) },
   { path: 'home',
     loadChildren: () => import('./componentes/home/home.module')
     .then(mod => mod.HomeModule) },

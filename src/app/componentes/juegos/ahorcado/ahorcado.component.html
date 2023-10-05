@@ -1,0 +1,33 @@
+<section class="ahorcado-container">
+  <!-- <div class="container d-flex flex-column justify-content-center juego-contenedor" *ngIf="user"> -->
+  <div class="container juego-contenedor" *ngIf="true">
+    <h1 class="titulo-ahorcado">AHORCADO</h1>
+    <button class="btn-volver" (click)="volverAHome()">Volver a la sala</button>
+    <p class="intentos">Intentos {{ attempts }}/6</p>
+    <div class="contenedor-general row">
+      <div class="col contenedor-botones">
+        <div class="row palabra-adivinar">
+          <div class="col-md-12 text-center">
+            <div *ngFor="let hyphen of hyphenatedWord" class="d-inline">
+              <h1 class="d-inline p-2">{{ hyphen }}</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <button
+            *ngFor="let letter of buttonLetters"
+            class="btn-letra"
+            (click)="sendLetter(letter)"
+          >
+            {{ letter }}
+          </button>
+        </div>
+        <div *ngIf="!activeGame">
+          <button class="btn-reiniciar" (click)="restartGame()">
+            REINICIAR JUEGO
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

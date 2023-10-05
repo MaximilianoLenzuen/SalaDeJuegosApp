@@ -25,7 +25,6 @@ export class ChatComponent implements OnInit{
   }
 
   async publicarMensajeEnChat() {
-    console.log("mandando mensaje");
     this.userService.publicarMensaje(this.mensajeAEnviar);
     this.listaDeMensajes = await this.mensajesService.obtenerMensajesDelChat();
   }
