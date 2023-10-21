@@ -38,6 +38,14 @@ export class AhorcadoComponent {
     'Y',
     'Z',
   ];
+
+  victory: boolean = false;
+  activeGame: boolean = true;
+  attempts: number = 6;
+  image: number | any = 0;
+  word: string = '';
+  hyphenatedWord: string[] = [];
+
   listOfWords: string[] = [
     'ESMERALDA',
     'PERRO',
@@ -52,13 +60,7 @@ export class AhorcadoComponent {
     'TERRATENIENTE',
     'ESCALERA',
   ];
-  victory: boolean = false;
-  activeGame: boolean = true;
-  attempts: number = 6;
-  image: number | any = 0;
-  word: string = '';
-  hyphenatedWord: string[] = [];
-
+  
   constructor(
     private router: Router,
   ) {
